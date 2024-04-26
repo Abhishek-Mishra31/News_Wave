@@ -56,10 +56,11 @@ export default class NewsItem extends Component {
         >
           <div className="container">
             <div className="row">
-              {this.state.articles.map((element) => {
+              {this.state.articles.map((element, index) => {
                 return (
-                  <div className="col-md-4">
+                  <div className="col-md-4" key={index}>
                     <Items
+                      key={index}
                       head={element.title}
                       img={element.urlToImage}
                       newsUrl={element.url}
