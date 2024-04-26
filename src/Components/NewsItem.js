@@ -54,11 +54,14 @@ export default class NewsItem extends Component {
           hasMore={this.state.articles.length < this.state.totalResults}
           loader={<h4 color="white">Loading...</h4>}
         >
-          <div className="container">
+          <div className="container my-4">
             <div className="row">
               {this.state.articles.map((element, index) => {
                 return (
-                  <div className="col-md-4" key={index}>
+                  <div
+                    className="col-10 col-sm-6 col-md-4 col-lg-4 mb-4"
+                    key={index}
+                  >
                     <Items
                       key={index}
                       head={element.title}

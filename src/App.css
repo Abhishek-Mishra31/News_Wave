@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -40,7 +41,6 @@
 
 
 .App {
-
   background-color: #0d0d0e;
   font-family: monospace;
   background-size: cover;
@@ -49,13 +49,48 @@
 
 
 
-.navBox li{
-
+.navBox li {
   font-family: monospace;
   font-weight: bold;
 }
 
-.nav-link{
+.nav-link {
   margin-top: 1px;
   color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (min-width: 272px) and (max-width: 588px) {
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 271px) {
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 250px;
+    margin: 0 auto;
+
+  }
 }
