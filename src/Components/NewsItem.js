@@ -21,7 +21,7 @@ export default class NewsItem extends Component {
   }
 
   fetchData = async () => {
-    const url = `http://newsapi.org/v2/top-headlines?country=${
+    const url = `https://newsapi.org/v2/top-headlines?country=${
       this.props.country
     }&category=${this.props.category}&apiKey=${
       this.props.apikey
@@ -36,7 +36,7 @@ export default class NewsItem extends Component {
   };
 
   async componentDidMount() {
-    const url = `http://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&pageSize=10&page=1`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&pageSize=10&page=1`;
     let response = await fetch(url);
     let parsedData = await response.json();
     this.setState({
