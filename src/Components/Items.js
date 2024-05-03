@@ -6,9 +6,9 @@ export default class Items extends Component {
     return (
       <div className="card" style={{ width: "250px", margin: "0 auto" }}>
         <img
-          src={!img ? "" : img}
+          src={!img ? "image not availble" : img}
           className="card-img-top"
-          alt="Image is not Available"
+          alt="..."
         />
         <div className="card-body">
           <h5 className="card-title">{head.slice(0, 40)}...</h5>
